@@ -20,10 +20,6 @@ decrement(){ this.store.dispatch(decrement());}
 reset(){this.store.dispatch(reset());}
  
 
-
-
-
-
   public incrementCounter() {
     this.currentCount++;
   }
