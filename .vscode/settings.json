@@ -1,0 +1,13 @@
+{
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": true,
+    "gitlens.codeLens.scopes": [
+        "document",
+        "containers"
+    ],
+    "gitlens.statusBar.enabled": true,
+    "gitlens.hovers.enabled": true,
+    "gitlens.hovers.annotations.enabled": true,
+    "gitlens.defaultDateFormat": null
+}

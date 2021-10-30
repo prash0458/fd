@@ -1,0 +1,30 @@
+<h1>Books</h1>
+<p>Books from docker, mongoDb </p>
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Author</th>
+    </tr>
+    </thead>
+     <tbody>
+    <tr *ngFor="let book of bookList">
+        <td>
+            <button type="button" class="btn btn-default btn-sm" routerLink="">
+                <i class="bi bi-alarm-fill"></i>
+                Edit
+          </button>
+        </td>
+        <td>{{ book.id }}</td>
+        <td>{{ book.bookName }}</td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.category }}</td>
+        <td>{{ book.author }}</td>
+        <!-- <td><div [ngStyle]="'background-image':'url('https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg')'}"></div></td> -->
+    </tr>
+    </tbody>
+</table>
