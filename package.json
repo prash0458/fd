@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@ngrx/store": "^12.4.0",
+   
     "bootstrap": "^5.0.2",
     "ngx-bootstrap": "^6.2.0"
   }
