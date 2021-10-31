@@ -1,19 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpHeaders } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import {
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+  HttpHeaders,
+} from "@angular/common/http";
+import { RouterModule } from "@angular/router";
+import { AppComponent } from "./app.component";
+import { NavMenuComponent } from "./nav-menu/nav-menu.component";
+import { HomeComponent } from "./home/home.component";
+import { CounterComponent } from "./counter/counter.component";
+import { FetchDataComponent } from "./fetch-data/fetch-data.component";
+import { CategoryComponent } from "./category/category.component";
+import { BookComponent } from "./book/book.component";
+import { LetterModule } from "./letter/letter.module";
+import { AppRoutingModule } from "./app-routing.module";
 
-import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { CategoryComponent } from './category/category.component';
-import { BookComponent } from './book/book.component';
 //import { HttpHeaders, HttpClient } from '@anglar/common/http';
-import { StoreModule } from '@ngrx/store';
-import{ counterReducer } from './counter/counter.reducer';
+//import { StoreModule } from "@ngrx/store";
+//import { counterReducer } from "./counter/counter.reducer";
 
 @NgModule({
   declarations: [
@@ -23,23 +29,27 @@ import{ counterReducer } from './counter/counter.reducer';
     CounterComponent,
     FetchDataComponent,
     CategoryComponent,
-    BookComponent
+    BookComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
+    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'category', component: CategoryComponent },
-      { path: 'book', component: BookComponent },
-
+      { path: "", component: HomeComponent, pathMatch: "full" },
+      { path: "counter", component: CounterComponent },
+      { path: "fetch-data", component: FetchDataComponent },
+      { path: "category", component: CategoryComponent },
+      { path: "book", component: BookComponent },
     ]),
-    StoreModule.forRoot({count:counterReducer})
+    LetterModule,
+
+    //-------------
+    //StoreModule.forRoot({ count: counterReducer }),
+    //-------------
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

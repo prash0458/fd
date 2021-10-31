@@ -9,6 +9,10 @@
       <th>Price</th>
       <th>Category</th>
       <th>Author</th>
+      <th>ISB</th>
+      <th>Book Origin</th>
+      <th>Address List</th>
+      <th>Related <br />Persons list</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +28,25 @@
       <td>{{ book.price }}</td>
       <td>{{ book.category }}</td>
       <td>{{ book.author }}</td>
+      <td>{{ book.isb }}</td>
+      <td>{{ book.bookOrigin }}</td>
+      <td>
+        <ul *ngFor="let address of book.addressList">
+          <li>
+            {{ address.address1 + " " }} {{ address.address2 + " " }}
+            {{ address.city + " " }} {{ address.state + " " }}
+            {{ address.zip + " " }}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul *ngFor="let person of book.relatedPersonList">
+          <li>
+            {{ person.name + "; " }}
+          </li>
+        </ul>
+      </td>
+
       <!-- <td><div [ngStyle]="'background-image':'url('https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg')'}"></div></td> -->
     </tr>
   </tbody>
