@@ -36,13 +36,6 @@ import { AppRoutingModule } from "./app-routing.module";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: "", component: HomeComponent, pathMatch: "full" },
-      { path: "counter", component: CounterComponent },
-      { path: "fetch-data", component: FetchDataComponent },
-      { path: "category", component: CategoryComponent },
-      { path: "book", component: BookComponent },
-    ]),
     LetterModule,
 
     //-------------

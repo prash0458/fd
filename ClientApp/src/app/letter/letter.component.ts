@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-letter',
-  templateUrl: './letter.component.html',
-  styleUrls: ['./letter.component.css']
+  selector: "app-letter",
+  templateUrl: "./letter.component.html",
+  styleUrls: ["./letter.component.css"],
 })
 export class LetterComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
