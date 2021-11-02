@@ -6,6 +6,8 @@ import { FormGroup } from "@angular/forms";
   template: "",
 })
 export abstract class ChildFormSelectorComponent<T> {
+  fb: FormGroup;
+
   @Output()
   formInit = new EventEmitter<FormGroup>();
 
